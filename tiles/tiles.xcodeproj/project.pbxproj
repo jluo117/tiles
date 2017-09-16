@@ -16,6 +16,7 @@
 		79BD6FDD1F6C9ED90039EC32 /* gameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD6FDA1F6C9ED90039EC32 /* gameController.swift */; };
 		79BD6FDE1F6C9ED90039EC32 /* gameOverScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD6FDB1F6C9ED90039EC32 /* gameOverScreen.swift */; };
 		79BD6FE01F6C9FE50039EC32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79BD6FDF1F6C9FE50039EC32 /* Main.storyboard */; };
+		79BD6FE21F6CA66D0039EC32 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 79BD6FE11F6CA66D0039EC32 /* images.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		79BD6FDA1F6C9ED90039EC32 /* gameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gameController.swift; path = tiles/code/gameController.swift; sourceTree = "<group>"; };
 		79BD6FDB1F6C9ED90039EC32 /* gameOverScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = gameOverScreen.swift; path = tiles/code/gameOverScreen.swift; sourceTree = "<group>"; };
 		79BD6FDF1F6C9FE50039EC32 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = tiles/Main.storyboard; sourceTree = "<group>"; };
+		79BD6FE11F6CA66D0039EC32 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = images.png; path = tiles/Assets.xcassets/LaunchImage.launchimage/images.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,7 @@
 		79BD6FB81F6C9E460039EC32 = {
 			isa = PBXGroup;
 			children = (
+				79BD6FE11F6CA66D0039EC32 /* images.png */,
 				79BD6FDF1F6C9FE50039EC32 /* Main.storyboard */,
 				79BD6FD91F6C9ED90039EC32 /* gameClasses.swift */,
 				79BD6FDA1F6C9ED90039EC32 /* gameController.swift */,
@@ -138,6 +141,7 @@
 				79BD6FE01F6C9FE50039EC32 /* Main.storyboard in Resources */,
 				79BD6FD21F6C9E460039EC32 /* LaunchScreen.storyboard in Resources */,
 				79BD6FCF1F6C9E460039EC32 /* Assets.xcassets in Resources */,
+				79BD6FE21F6CA66D0039EC32 /* images.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = tiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = James.tiles;
@@ -280,6 +285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = tiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = James.tiles;
@@ -307,6 +313,7 @@
 				79BD6FD81F6C9E460039EC32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

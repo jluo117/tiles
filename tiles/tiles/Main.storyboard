@@ -221,20 +221,10 @@
                                     <segue destination="zsY-eP-ugG" kind="push" identifier="GameOver" id="erG-tv-95l"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kHg-GC-ocL">
-                                <rect key="frame" x="166" y="118" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.84561941959999998" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="UhC-6r-cwh"/>
-                    <connections>
-                        <outlet property="hitCheck" destination="Vps-uH-uQz" id="TB5-Hu-8A6"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zd-CB-AT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

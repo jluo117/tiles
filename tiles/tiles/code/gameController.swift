@@ -12,6 +12,7 @@ class gameController: UIViewController {
 
     var hitCount = 0
     override func viewDidLoad() {
+        self.navigationItem.setHidesBackButton(true, animated:true)
         theGame.clear()
         hitCount = 0
         //reboot.backgroundColor = UIColor.white
@@ -29,11 +30,10 @@ class gameController: UIViewController {
     
     
 
-    @IBOutlet weak var hitCheck: UILabel!
     
     
     @IBAction func tile(_ sender: UIButton) {
-        hitCheck.text = String(hitCount)
+        
         let pos = sender.tag
         if theGame.tiles[pos].isBomb{
             performSegue(withIdentifier: "GameOver", sender: self)
@@ -52,8 +52,7 @@ class gameController: UIViewController {
             self.hitCount += 1
             sender.backgroundColor = UIColor.black
         }
-        hitCheck.text = String(hitCount)
-
+        
         if hitCount == 8{
             theGame.victory = true
             performSegue(withIdentifier: "GameOver", sender: self)
