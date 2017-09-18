@@ -7,14 +7,14 @@
 //
 
 import UIKit
-var theGame = game()
+
 class gameController: UIViewController {
 
-    var hitCount = 0
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         self.navigationItem.setHidesBackButton(true, animated:true)
-        theGame.clear()
-        hitCount = 0
+        if theGame.played{
+            theGame.clear()
+        }
         //reboot.backgroundColor = UIColor.white
         super.viewDidLoad()
 
@@ -29,36 +29,24 @@ class gameController: UIViewController {
     
     
     
-
+    @IBOutlet weak var errorCheck: UILabel!
+//performSegue(withIdentifier: "GameOver", sender: self)
     
     
     @IBAction func tile(_ sender: UIButton) {
-        
-        let pos = sender.tag
-        if theGame.tiles[pos].isBomb{
+        let stat = theGame.buttonPress(tag: sender.tag)
+        if stat == "Game Over"{
             performSegue(withIdentifier: "GameOver", sender: self)
         }
         
-        
-        
-        if theGame.tiles[pos].pressed{
-            return
+        if stat == "Win"{
+            performSegue(withIdentifier: "GameOver", sender: self)
         }
-            
-            
-        
-        else{
-            theGame.tiles[pos].pressed = true
-            self.hitCount += 1
+        if stat == "Good"{
             sender.backgroundColor = UIColor.black
         }
         
-        if hitCount == 8{
-            theGame.victory = true
-            performSegue(withIdentifier: "GameOver", sender: self)
-        }
     }
-
     
     /*
     // MARK: - Navigation

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79B5C03D1F70492300C27266 /* menuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79B5C03C1F70492300C27266 /* menuController.swift */; };
 		79BD6FC51F6C9E460039EC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD6FC41F6C9E460039EC32 /* AppDelegate.swift */; };
 		79BD6FC71F6C9E460039EC32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BD6FC61F6C9E460039EC32 /* ViewController.swift */; };
 		79BD6FCD1F6C9E460039EC32 /* tiles.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79BD6FCB1F6C9E460039EC32 /* tiles.xcdatamodeld */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79B5C03C1F70492300C27266 /* menuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = menuController.swift; path = tiles/code/menuController.swift; sourceTree = "<group>"; };
 		79BD6FC11F6C9E460039EC32 /* tiles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tiles.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79BD6FC41F6C9E460039EC32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79BD6FC61F6C9E460039EC32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 				79BD6FE11F6CA66D0039EC32 /* images.png */,
 				79BD6FDF1F6C9FE50039EC32 /* Main.storyboard */,
 				79BD6FD91F6C9ED90039EC32 /* gameClasses.swift */,
+				79B5C03C1F70492300C27266 /* menuController.swift */,
 				79BD6FDA1F6C9ED90039EC32 /* gameController.swift */,
 				79BD6FDB1F6C9ED90039EC32 /* gameOverScreen.swift */,
 				79BD6FC31F6C9E460039EC32 /* tiles */,
@@ -156,6 +159,7 @@
 				79BD6FDD1F6C9ED90039EC32 /* gameController.swift in Sources */,
 				79BD6FCD1F6C9E460039EC32 /* tiles.xcdatamodeld in Sources */,
 				79BD6FDE1F6C9ED90039EC32 /* gameOverScreen.swift in Sources */,
+				79B5C03D1F70492300C27266 /* menuController.swift in Sources */,
 				79BD6FC71F6C9E460039EC32 /* ViewController.swift in Sources */,
 				79BD6FC51F6C9E460039EC32 /* AppDelegate.swift in Sources */,
 			);
