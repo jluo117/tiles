@@ -277,7 +277,6 @@
                                 </state>
                                 <connections>
                                     <action selector="tile:" destination="iYM-O0-hfo" eventType="touchUpInside" id="TOp-I5-beH"/>
-                                    <segue destination="zsY-eP-ugG" kind="push" identifier="GameOver" id="EOJ-hl-AJ5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" id="YOR-T7-K7E">
@@ -336,6 +335,7 @@
                     <navigationItem key="navigationItem" id="edd-mZ-ICJ"/>
                     <connections>
                         <outlet property="errorCheck" destination="dN9-YR-7HS" id="HHf-iB-TMv"/>
+                        <segue destination="zsY-eP-ugG" kind="push" identifier="GameOver" id="pqJ-TL-QWj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4P9-eN-BTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -518,7 +518,6 @@
                                 </state>
                                 <connections>
                                     <action selector="tile:" destination="q0S-ad-fZ2" eventType="touchUpInside" id="kqM-ua-cOa"/>
-                                    <segue destination="zsY-eP-ugG" kind="push" identifier="GameOver" id="erG-tv-95l"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -528,7 +527,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zd-CB-AT9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2242" y="-1590"/>
+            <point key="canvasLocation" x="2406" y="-1623"/>
         </scene>
         <!--Game Controller-->
         <scene sceneID="WOf-Js-zb5">
@@ -598,7 +597,6 @@
                                 </state>
                                 <connections>
                                     <action selector="tile:" destination="Z9d-Ib-VQB" eventType="touchUpInside" id="upn-G5-10A"/>
-                                    <segue destination="zsY-eP-ugG" kind="push" identifier="GameOver" id="nJA-GR-n7K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4kQ-Co-vDX">
@@ -726,6 +724,9 @@
                         <color key="backgroundColor" red="1" green="0.0198914904" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="TRK-Zd-6co"/>
+                    <connections>
+                        <segue destination="zsY-eP-ugG" kind="push" identifier="GameOver" id="427-AO-kuU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEF-4x-GCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -792,7 +793,7 @@
         <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="nJA-GR-n7K"/>
+        <segue reference="427-AO-kuU"/>
         <segue reference="pxx-cD-c8d"/>
     </inferredMetricsTieBreakers>
 </document>

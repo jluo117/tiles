@@ -114,6 +114,7 @@
 				TargetAttributes = {
 					79BD6FC01F6C9E460039EC32 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8RS9W23TVG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -277,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 8RS9W23TVG;
 				INFOPLIST_FILE = tiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = James.tiles;
@@ -290,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = 8RS9W23TVG;
 				INFOPLIST_FILE = tiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = James.tiles;
