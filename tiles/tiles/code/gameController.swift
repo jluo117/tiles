@@ -36,10 +36,12 @@ class gameController: UIViewController {
     @IBAction func tile(_ sender: UIButton) {
         let stat = theGame.buttonPress(tag: sender.tag)
         if stat == "Game Over"{
+            theGame.played = true
             performSegue(withIdentifier: "GameOver", sender: self)
         }
         
         if stat == "Win"{
+            theGame.played = true
             performSegue(withIdentifier: "GameOver", sender: self)
         }
         if stat == "Good"{
