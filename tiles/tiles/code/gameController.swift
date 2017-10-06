@@ -44,6 +44,9 @@ class gameController: UIViewController {
             theGame.played = true
             performSegue(withIdentifier: "GameOver", sender: self)
         }
+        if stat == "green"{
+            sender.backgroundColor = UIColor.green
+        }
         if stat == "Good"{
             sender.backgroundColor = UIColor.black
         }

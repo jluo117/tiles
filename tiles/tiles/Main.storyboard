@@ -790,6 +790,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Uu2-El-Cxm"/>
         <segue reference="pqJ-TL-QWj"/>
         <segue reference="pxx-cD-c8d"/>
     </inferredMetricsTieBreakers>

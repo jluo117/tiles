@@ -23,6 +23,7 @@ class menuController: UIViewController {
     
 
     
+    @IBOutlet weak var hint: UISwitch!
     
     
     
