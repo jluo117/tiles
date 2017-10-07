@@ -25,63 +25,52 @@ class game{
     var score = 0
     var victory = false
     var size: Int
-    var bombPos: Int
+    var trapPos = [Int]()
     var played: Bool
-    var pos1: Int
-    var pos2: Int
+    var keyPos = [Int]()
+    var trapSize = 0
+    var keySize = 0
     init() {
         self.size = 0
-        self.bombPos = 0
         self.played = false
-        self.pos1 = 0
-        self.pos2 = 0
     }
-    func buildGame(size: Int) {
+    func buildGame(size: Int,key: Int, trap: Int) {
+        self.clear()
         self.size = size
-        self.bombPos = Int(arc4random_uniform(UInt32(size)))
-        var startNum = 0
-        self.pos1 = Int(arc4random_uniform(UInt32(size)))
-        self.pos2 = Int(arc4random_uniform(UInt32(size)))
-        while self.pos1 == self.bombPos{
-            if bombPos == 0{
-                self.pos1 = Int(arc4random_uniform(UInt32(size - 1))) + 1
+        self.trapSize = trap
+        self.keySize = key
+        while self.trapPos.count < trap{
+            var trapLoc = Int(arc4random_uniform(UInt32(size - 1)))
+            while self.trapPos.contains(trapLoc){
+                trapLoc = Int(arc4random_uniform(UInt32(size - 1)))
             }
-            if bombPos == size-1{
-                self.pos1 = Int(arc4random_uniform(UInt32(size - 1))) - 1
-            }
-            else{
-                self.pos1 = Int(arc4random_uniform(UInt32(size)))
-            }
+            self.trapPos.append(trapLoc)
         }
-        while self.pos2 == self.bombPos{
-            if bombPos == 0{
-                self.pos2 = Int(arc4random_uniform(UInt32(size - 1))) + 1
+        while self.keyPos.count < key{
+            var keyLoc = Int(arc4random_uniform(UInt32(size - 1)))
+            while ((self.trapPos.contains(keyLoc)) || (self.keyPos.contains(keyLoc))){
+                keyLoc = Int(arc4random_uniform(UInt32(size - 1)))
             }
-            if bombPos == size-1{
-                self.pos2 = Int(arc4random_uniform(UInt32(size - 1))) - 1
-            }
-            else{
-                self.pos2 = Int(arc4random_uniform(UInt32(size)))
-            }
+            keyPos.append(keyLoc)
         }
-        while startNum < size{
-            if startNum == bombPos{
+        var curArray = 0
+        
+        
+        while curArray < size{
+            if trapPos.contains(curArray){
                 let pos = position(tag: true, key: false)
                 self.tiles.append(pos)
             }
-            if startNum == self.pos1{
+            if trapPos.contains(curArray){
                 let pos = position(tag: false, key: true )
                 self.tiles.append(pos)
             }
-            if startNum == self.pos2{
-                let pos = position(tag: false, key: true )
-                self.tiles.append(pos)
-            }
+            
             else{
                 let pos = position(tag: false, key: false)
                 self.tiles.append(pos)
             }
-            startNum += 1
+            curArray += 1
     }
     }
     
@@ -99,7 +88,7 @@ class game{
             victory = true
             return "Win"
         }
-        if (tag == self.pos1 || tag == self.pos2){
+        if (self.keyPos.contains(tag)){
             return "green"
         }
         return "Good"
@@ -107,19 +96,23 @@ class game{
     
     
     func isWin() -> Bool {
-        if tiles[pos1].pressed && tiles[pos2].pressed{
-            return true
+        for pos in keyPos{
+            if tiles[pos].pressed{
+                
+            }
+            else{
+                return false
+            }
         }
-        else{
-            return false
-        }
+        return true
     }
     
     func clear(){
+        self.tiles.removeAll()
+        self.keyPos.removeAll()
+        self.trapPos.removeAll()
         self.played = false
         self.victory = false
-        tiles.removeAll()
-        buildGame(size: self.size)
     }
 }
 

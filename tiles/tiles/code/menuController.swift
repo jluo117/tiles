@@ -7,6 +7,8 @@
 //
 
 import UIKit
+var trapCount = 1
+var keyCount = 1
 var theGame = game()
 class menuController: UIViewController {
 
@@ -26,10 +28,16 @@ class menuController: UIViewController {
     @IBOutlet weak var hint: UISwitch!
     
     
+    @IBAction func trap(_ sender: UIButton) {
+        trapCount = sender.tag
+    }
     
+    @IBAction func key(_ sender: UIButton) {
+        keyCount = sender.tag
+    }
     @IBAction func gameSelect(_ sender: UIButton) {
         let gameSize = sender.tag
-        theGame.buildGame(size: gameSize)
+        theGame.buildGame(size: gameSize, key: keyCount, trap: trapCount)
     }
     
     
