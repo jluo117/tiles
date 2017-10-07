@@ -8,53 +8,59 @@
 
 import Foundation
 class deck{
-    var cards = [card]()
+    var Cards = [card]()
     init() {
         for i in 1 ... 10{
             let cardData = card(faceCard: String(i), type: "clubs")
-            cards.append(cardData)
+            Cards.append(cardData)
         }
         
         var jack = card(faceCard: "jack", type: "clubs")
-        cards.append(jack)
+        Cards.append(jack)
         var queen = card(faceCard: "queen", type: "clubs")
-        cards.append(queen)
+        Cards.append(queen)
         var king = card(faceCard: "king", type: "clubs")
-        cards.append(king)
+        Cards.append(king)
         
         
         for i in 1 ... 10{
             let cardData = card(faceCard: String(i), type: "spades")
-            cards.append(cardData)
+            Cards.append(cardData)
         }
         jack = card(faceCard: "jack", type: "spades")
-        cards.append(jack)
+        Cards.append(jack)
         queen = card(faceCard: "queen", type: "spades")
-        cards.append(queen)
+        Cards.append(queen)
         king = card(faceCard: "king", type: "spades")
-        cards.append(king)
+        Cards.append(king)
         
         for i in 1 ... 10{
             let cardData = card(faceCard: String(i), type: "diamonds")
-            cards.append(cardData)
+            Cards.append(cardData)
         }
         jack = card(faceCard: "jack", type: "diamonds")
-        cards.append(jack)
+        Cards.append(jack)
         queen = card(faceCard: "queen", type: "diamonds")
-        cards.append(queen)
+        Cards.append(queen)
         king = card(faceCard: "king", type: "diamonds")
-        cards.append(king)
+        Cards.append(king)
         
         for i in 1 ... 10{
             let cardData = card(faceCard: String(i), type: "hearts")
-            cards.append(cardData)
+            Cards.append(cardData)
         }
         jack = card(faceCard: "jack", type: "hearts")
-        cards.append(jack)
+        Cards.append(jack)
         queen = card(faceCard: "queen", type: "hearts")
-        cards.append(queen)
+        Cards.append(queen)
         king = card(faceCard: "king", type: "hearts")
-        cards.append(king)
+        Cards.append(king)
+    }
+    func draw() -> card {
+        let cardPos  = Int(arc4random_uniform(UInt32((cards.count))))
+        let card = Cards[cardPos]
+        self.Cards.remove(at: cardPos)
+        return card
     }
     
 }
